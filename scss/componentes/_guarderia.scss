@@ -1,0 +1,190 @@
+/*---------------------------
+** PROPIEDADES PAGINA GUARDERIA
+---------------------------*/
+
+				/*--------** Seccion: Introducción al servicio de hospedaje + imagenes -------------*/
+.guarderiaInicio {
+    @include medida-seccion;
+}
+
+.guarde-01 {
+    @include box-estilo (10px, 02%);
+    @include flex(center, center);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.guarde-txta {
+    width: 50%;
+    margin: 10px;
+    overflow: auto;
+}
+
+.guarde-imga {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 4px 4px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ".div .div"
+    "div div";
+}
+
+				/*--------** Seccion: ¿Por que elegirnos? -------------*/
+.guarde-02 {
+    @include medida-seccion;
+    padding: 10px;
+    @include flex(center, center);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    overflow: auto;
+}
+
+.guarde-txtb {
+    width: 50%;
+    margin: 10px;
+}
+
+.guarde-imgb {
+    @include box-estilo (05px, 02px);
+    @include flex(center, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: baseline;
+    overflow: auto;
+}
+
+				/*--------** Seccion: Informacion extra sobre el beneficio de las guarderias -------------*/
+.guarde-extra {
+    margin: 03% 02%;
+    @include flex(center, center);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    overflow: auto;
+}
+
+.gua-extratx {
+    width: 90%;
+    @include box-estilo (05px, 20px);
+    @include flex(center, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: baseline;
+    overflow: auto;
+}
+
+.guard-list {
+    @include box-estilo (05px, 02px);
+    position: static;
+    @include flex(center, center);
+    flex-flow: column wrap;
+    align-content: baseline;
+    overflow: auto;
+    li {
+        background-color: white;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        padding: 03px 30px;
+        margin: 15px 100px;
+    }
+}
+
+
+
+/* PANTALLAS TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .guarde-01 {
+        @include box-estilo (02px, 10px);
+    }
+
+    .guarde-txta {
+        width: 75%;
+        margin: 10px;
+    }
+
+    .guarde-02 {
+        padding: 10px;
+    }
+
+    .guarde-txtb {
+        width: 85%;
+        margin: 10px;
+    }
+
+    .guard-list li {
+        font-size: map-get($fuente, normal);
+        margin: 15px 30px;
+    }
+}
+
+
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .guarde-01 {
+        height: auto;
+        padding: 03px;
+    }
+
+    .guarde-txta {
+        width: 97%;
+        margin: 03px;
+    }
+
+    .guarde-imga {
+        @include box-tamano (97%, auto);
+    }
+
+    .guaA, .guaB, .guaC, .guaD {
+        @include box-tamano (90%, auto);
+        max-width: 100%;
+    }
+    
+
+    .guarde-02 {
+        padding: 02px;
+    }
+
+    .guarde-txtb {
+        @include box-tamano (99%, auto);
+        margin: 02px;
+    }
+
+    .guarde-imgb img {
+        @include box-tamano (57%, auto);
+        max-width: 100%;
+        margin: 01% 20%;
+    }
+
+    .guarde-extra {
+        padding: 02px;
+    }
+
+    .gua-extratx {
+        width: 97%;
+        padding: 02px;
+    }
+
+    .guard-list {
+        width: 97%;
+        margin: 02px 01px;
+        padding: 02px;
+        li {
+            background-color: white;
+            font-size: map-get($fuente, smallb);
+            padding: 03px;
+            margin: 15px;
+        }
+    }
+
+    .guarde-extra iframe {
+        @include box-tamano (99%, auto);
+        max-width: 100%;
+        margin: 02px 01px;
+        padding: 02px;
+    }
+}

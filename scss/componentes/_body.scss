@@ -1,0 +1,168 @@
+/*---------------------------
+** RESETEO CSS
+---------------------------*/
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+				 //PROPIEDADES GENERALES DEL SITIO // 
+/*---------------------------
+** PROPIEDADES DEL BODY = GRID
+---------------------------*/
+body {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto 37%;
+	gap: 03px 0px;
+	grid-auto-flow: column;
+	grid-template-areas: "header" "nav" "main" "footer";
+	background-image: url("../img/gure-final.webp");
+	opacity: 0,1;
+	background-repeat: repeat;
+}
+header {
+	grid-area: header;
+}
+nav {
+	grid-area: nav;
+}
+main {
+	grid-area: main;
+}
+footer {
+	grid-area: footer;
+}
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	body {
+		max-width: 100%;
+	}
+}
+
+
+
+
+/*---------------------------
+** PROPIEDADES DEL MAIN 
+---------------------------*/
+main {
+    margin: 02px 07px;
+}
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    main {
+        width: 99%;
+        max-width: 100%;
+        margin: 01px;
+    }
+}
+
+
+
+/*---------------------------
+** PROPIEDADES DEL FOOTER  
+---------------------------*/
+footer {
+    @include box-tamano (99%, 03%);
+    max-width: 100%;
+    @include box-estilo (03px, 01px);
+}
+/* Seccion: Copyright */
+.copy p {
+    width: 99%;
+    font-size: map-get($fuente, large);
+    text-align: center;
+    padding: 01px 30px;
+} 
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .copy p {
+        max-width: 100%;
+        font-size: map-get($fuente, smallb);
+        margin: 02px;
+        padding: 01px 10px;
+    }
+}
+
+
+
+/*---------------------------
+** PROPIEDADES GENERALES DE LAS IMAGENES 
+---------------------------*/
+.img-general {
+    @include box-estilo (05px, 03px);
+    border-radius: 17px;
+}
+// PANTALLA CELULAR //
+@media screen and (min-width: 320px) and (max-width: 767px) { 
+    .img-general {
+        margin: 02px; 
+        border: 3px;
+    }
+}
+
+
+
+/*---------------------------
+** PROPIEDADES GENERALES DE LOS TITULOS Y PARRAFOS
+---------------------------*/
+
+				/*--------** TITULOS PRINCIPALES-------------*/
+h1 {
+    background-color: $color-principal;
+    font-family: $fuente-familia-titulo;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    @include box-estilo (01%, 01%);
+}
+// PANTALLA CELULAR //
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    h1{
+        font-size: map-get($fuente, smallb);
+    }
+}
+
+				/*--------** TITULOS SECUNDARIOS-------------*/
+h2, h3 {
+    background-color: $color-principal;
+    font-family: $fuente-familia-subtitulo;
+    font-size: map-get($fuente, largeb);
+    font-weight: 400;
+    text-align: center;
+    @include box-estilo (05px, 02%);
+}
+// PANTALLAS CELULAR //
+@media screen and (min-width: 320px) and (max-width: 767px) { 
+    h2, h3 {
+        font-size: map-get($fuente, smallc);    }
+}
+
+				/*--------** PARRAFOS-------------*/
+p {
+    background-color: $color-principal;
+    font-family: $fuente-familia-parrafo;
+    font-size: map-get($fuente, smallc);    
+    font-weight: 400;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    @include box-estilo (10px, 05px);
+}
+// PANTALLAS TABLET //
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    p {
+        font-size: map-get($fuente, normal);
+        }
+}
+// PANTALLAS CELULAR //
+@media screen and (min-width: 320px) and (max-width: 767px) { 
+    p {
+        font-size: map-get($fuente, smallc);
+        @include box-estilo (07px, 01px);
+    }
+}
+
+
+

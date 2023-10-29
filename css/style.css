@@ -1,0 +1,1264 @@
+@charset "UTF-8";
+/*--------** VARIABLES DE COLORES -------------*/
+/*--------** VARIABLES DE TIPOGRAFIAS -------------*/
+/*--------** VARIABLE DE ANIMACION DEL LOGO -------------*/
+@-webkit-keyframes tilt-in-top-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+    transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-top-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+    transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+/*--------** MAPA TAMANO FUENTE-------------*/
+.botonBasico, .btn-secu, #borrar, #enviar {
+  width: 30%;
+  height: 20%;
+  padding: 5px;
+  margin: 10px 0px 20px 0px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/*--------** BOTON FORMULARIO CONTACTO-------------*/
+#enviar {
+  background-color: rgb(173, 241, 173);
+}
+#enviar p {
+  background-color: rgb(173, 241, 173);
+  font-size: 17px;
+}
+
+/*--------** BOTON FORMULARIO CONTACTO-------------*/
+#borrar {
+  background-color: rgb(221, 127, 127);
+}
+#borrar p {
+  background-color: rgb(221, 127, 127);
+  font-size: 17px;
+}
+
+/*--------** BOTON CARDS PAGINA INICIO-------------*/
+.btn-secu {
+  background-color: #F787D0;
+  text-decoration: none;
+  width: auto;
+  height: auto;
+}
+
+/*---------------------------
+** RESETEO CSS
+---------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*---------------------------
+** PROPIEDADES DEL BODY = GRID
+---------------------------*/
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto 37%;
+  gap: 3px 0px;
+  grid-auto-flow: column;
+  grid-template-areas: "header" "nav" "main" "footer";
+  background-image: url("../img/gure-final.webp");
+  opacity: 0, 1;
+  background-repeat: repeat;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    max-width: 100%;
+  }
+}
+/*---------------------------
+** PROPIEDADES DEL MAIN 
+---------------------------*/
+main {
+  margin: 2px 7px;
+}
+
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  main {
+    width: 99%;
+    max-width: 100%;
+    margin: 1px;
+  }
+}
+/*---------------------------
+** PROPIEDADES DEL FOOTER  
+---------------------------*/
+footer {
+  width: 99%;
+  height: 3%;
+  max-width: 100%;
+  padding: 3px;
+  margin: 1px;
+}
+
+/* Seccion: Copyright */
+.copy p {
+  width: 99%;
+  font-size: 21px;
+  text-align: center;
+  padding: 1px 30px;
+}
+
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .copy p {
+    max-width: 100%;
+    font-size: 15px;
+    margin: 2px;
+    padding: 1px 10px;
+  }
+}
+/*---------------------------
+** PROPIEDADES GENERALES DE LAS IMAGENES 
+---------------------------*/
+.img-general {
+  padding: 5px;
+  margin: 3px;
+  border-radius: 17px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .img-general {
+    margin: 2px;
+    border: 3px;
+  }
+}
+/*---------------------------
+** PROPIEDADES GENERALES DE LOS TITULOS Y PARRAFOS
+---------------------------*/
+/*--------** TITULOS PRINCIPALES-------------*/
+h1 {
+  background-color: white;
+  font-family: "Mooli", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  padding: 1%;
+  margin: 1%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  h1 {
+    font-size: 15px;
+  }
+}
+/*--------** TITULOS SECUNDARIOS-------------*/
+h2, h3 {
+  background-color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  padding: 5px;
+  margin: 2%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  h2, h3 {
+    font-size: 17px;
+  }
+}
+/*--------** PARRAFOS-------------*/
+p {
+  background-color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  padding: 10px;
+  margin: 5px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  p {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  p {
+    font-size: 17px;
+    padding: 7px;
+    margin: 1px;
+  }
+}
+/*---------------------------
+** PROPIEDADES DE LA BARRA DE NAVEGACION
+---------------------------*/
+nav {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  overflow: hidden;
+  background: white;
+  border-radius: 50px;
+  padding: 2px;
+  box-shadow: 0 25px 20px -20px black;
+}
+nav ul li {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 0.5s;
+}
+nav ul li a {
+  color: black;
+  font-family: "Rubik", sans-serif;
+  font-size: 27px;
+  font-weight: 600;
+  display: block;
+  text-decoration: none;
+}
+nav ul li a::after {
+  content: "";
+  background: #83d7d0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  transition: top 0.5s, opacity 0.5s;
+}
+nav ul li a:hover {
+  color: white;
+}
+nav ul li a:hover:hover::after {
+  top: 50%;
+  opacity: 1;
+}
+nav a:hover, nav a.active {
+  background-color: none;
+  color: rgb(128, 123, 123);
+}
+nav #check {
+  display: none;
+}
+nav #btn, nav #cancel {
+  font-size: 40px;
+  float: right;
+  line-height: 40px;
+  margin-right: 3%;
+  cursor: pointer;
+  display: none;
+}
+
+/* PANTALLAS TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  nav ul {
+    padding: 1px;
+  }
+  nav ul li {
+    padding: 10px 15px;
+  }
+  nav ul li a {
+    font-size: 24px;
+  }
+}
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  nav {
+    width: 30%;
+    height: auto;
+    padding: 6px;
+    margin: 5% 1%;
+  }
+  nav ul {
+    width: 60%;
+    height: 260px;
+    overflow: hidden;
+    background: white;
+    border-radius: 50px;
+    padding: 2px;
+    z-index: 1100;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.7s;
+  }
+  nav ul li {
+    display: block;
+    margin: 20px;
+    line-height: 10px;
+  }
+  nav ul li a {
+    font-size: 21px;
+  }
+  label #btn {
+    display: block;
+  }
+  #btn {
+    margin-left: -7%;
+    position: static;
+    line-height: 3px;
+    cursor: pointer;
+  }
+  #cancel {
+    margin-left: -7%;
+    position: static;
+    line-height: 3px;
+    cursor: pointer;
+  }
+  a:hover {
+    background-color: none;
+    color: rgb(128, 123, 123);
+  }
+  a.active {
+    background-color: none;
+    color: rgb(128, 123, 123);
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  #check:checked ~ label #btn {
+    display: none;
+  }
+  #check:checked ~ label #cancel {
+    display: block;
+  }
+  #check checkbox {
+    display: none;
+  }
+}
+/*---------------------------
+** PROPIEDADES REDES SOCIALES  
+---------------------------*/
+#redesSociales {
+  max-width: 300%;
+  padding: 32px 10px;
+  margin: auto;
+  position: fixed;
+  overflow: hidden;
+  right: -130px;
+  top: 230px;
+  z-index: 1100;
+}
+
+.social {
+  width: 41px;
+  height: 43px;
+  position: fixed;
+  right: 0;
+  float: left;
+  margin: 5px 4px;
+  top: 50%;
+  padding: 0px;
+  cursor: pointer;
+}
+
+ion-icon {
+  font-size: 40px;
+  color: black;
+  padding: 1px;
+  background: #83d7d0;
+  border-radius: 8PX;
+}
+
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  #redesSociales {
+    width: 99%;
+    height: auto;
+    max-width: 100%;
+    margin: 3px;
+    padding: 2px;
+    position: static;
+  }
+  .social {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    position: static;
+    margin: 5px 100px;
+  }
+  ion-icon {
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+    padding: 2px;
+    margin: 0px 7px;
+    border-radius: 8PX;
+  }
+}
+/*---------------------------
+** PROPIEDADES PAGINA INICIO
+---------------------------*/
+/*--------** Seccion: Historia y presentación de GUREUM + imagen-------------*/
+.inicio {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+}
+
+.inicioA {
+  padding: 5px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  overflow: auto;
+}
+
+.iniImg img {
+  width: 95%;
+  padding: 6px;
+  margin: 1%;
+  border: 7px solid #83d7d0;
+  border-radius: 17px;
+}
+
+.iniTxt {
+  padding: 5px;
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  align-content: baseline;
+  overflow: auto;
+}
+
+/*--------** Seccion: cards -------------*/
+.ini-servicios {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+  height: auto;
+}
+
+.contenedorCards {
+  padding: 3px;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  border-radius: 24px;
+}
+
+.card-body {
+  font-size: 17px;
+  padding: 3px;
+  display: flex;
+  justify-content: none;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+/*--------** Seccion: staff + imagen -------------*/
+.staffA {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.staffTexto {
+  padding: 5px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  align-content: baseline;
+  overflow: auto;
+}
+
+.staffImg {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-flow: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .inicio {
+    width: 99%;
+  }
+  .inicioA {
+    padding: 5px;
+    margin: 3px;
+  }
+  .iniImg img {
+    width: 95%;
+    height: auto;
+  }
+  .iniTxt {
+    margin: 1%;
+  }
+  .staffTexto {
+    margin: 5px;
+  }
+}
+/*---------------------------
+** PROPIEDADES DEL HEADER
+---------------------------*/
+header {
+  background-color: #F787D0;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  header {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+/*--------** PROPIEDADES DEL LOGO EN EL HEADER -------------*/
+#logi {
+  width: 90%;
+  height: 50%;
+  max-width: 100%;
+  padding: 2% 7%;
+  margin: 7px;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+  animation-name: tilt-in-top-1;
+  animation-fill-mode: both;
+}
+
+/*--------** ANIMACION DEL LOGO -------------*/
+.tilt-in-top-1 {
+  -webkit-animation: tilt-in-top-1 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: tilt-in-top-1 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/*---------------------------
+** PROPIEDADES PAGINA GUARDERIA
+---------------------------*/
+/*--------** Seccion: Introducción al servicio de hospedaje + imagenes -------------*/
+.guarderiaInicio {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+}
+
+.guarde-01 {
+  padding: 10px;
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.guarde-txta {
+  width: 50%;
+  margin: 10px;
+  overflow: auto;
+}
+
+.guarde-imga {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 4px 4px;
+  grid-auto-flow: row;
+  grid-template-areas: ".div .div" "div div";
+}
+
+/*--------** Seccion: ¿Por que elegirnos? -------------*/
+.guarde-02 {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: auto;
+}
+
+.guarde-txtb {
+  width: 50%;
+  margin: 10px;
+}
+
+.guarde-imgb {
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: baseline;
+  overflow: auto;
+}
+
+/*--------** Seccion: Informacion extra sobre el beneficio de las guarderias -------------*/
+.guarde-extra {
+  margin: 3% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: auto;
+}
+
+.gua-extratx {
+  width: 90%;
+  padding: 5px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: baseline;
+  overflow: auto;
+}
+
+.guard-list {
+  padding: 5px;
+  margin: 2px;
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  align-content: baseline;
+  overflow: auto;
+}
+.guard-list li {
+  background-color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  padding: 3px 30px;
+  margin: 15px 100px;
+}
+
+/* PANTALLAS TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .guarde-01 {
+    padding: 2px;
+    margin: 10px;
+  }
+  .guarde-txta {
+    width: 75%;
+    margin: 10px;
+  }
+  .guarde-02 {
+    padding: 10px;
+  }
+  .guarde-txtb {
+    width: 85%;
+    margin: 10px;
+  }
+  .guard-list li {
+    font-size: 20px;
+    margin: 15px 30px;
+  }
+}
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .guarde-01 {
+    height: auto;
+    padding: 3px;
+  }
+  .guarde-txta {
+    width: 97%;
+    margin: 3px;
+  }
+  .guarde-imga {
+    width: 97%;
+    height: auto;
+  }
+  .guaA, .guaB, .guaC, .guaD {
+    width: 90%;
+    height: auto;
+    max-width: 100%;
+  }
+  .guarde-02 {
+    padding: 2px;
+  }
+  .guarde-txtb {
+    width: 99%;
+    height: auto;
+    margin: 2px;
+  }
+  .guarde-imgb img {
+    width: 57%;
+    height: auto;
+    max-width: 100%;
+    margin: 1% 20%;
+  }
+  .guarde-extra {
+    padding: 2px;
+  }
+  .gua-extratx {
+    width: 97%;
+    padding: 2px;
+  }
+  .guard-list {
+    width: 97%;
+    margin: 2px 1px;
+    padding: 2px;
+  }
+  .guard-list li {
+    background-color: white;
+    font-size: 15px;
+    padding: 3px;
+    margin: 15px;
+  }
+  .guarde-extra iframe {
+    width: 99%;
+    height: auto;
+    max-width: 100%;
+    margin: 2px 1px;
+    padding: 2px;
+  }
+}
+/*---------------------------
+** PROPIEDADES PAGINA HOSPEDAJE
+---------------------------*/
+/*--------** Seccion: Introducción al servicio de hospedaje -------------*/
+.hospe-ini {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: auto;
+}
+
+.hospeini-txt {
+  width: 50%;
+  margin: 7px 5px;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: baseline;
+  overflow: auto;
+}
+
+/*--------** Seccion: Aclaracion de los que se debe traer -------------*/
+.hospe-que {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: auto;
+}
+
+.hospe-quetxt {
+  width: 50%;
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: baseline;
+  overflow: auto;
+}
+
+.hospe-queimg {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+/*--------** Seccion: Como reservar una cita y proceso de ingreso -------------*/
+.hospe-cita {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: auto;
+}
+
+.hospe-citatxt {
+  width: 50%;
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: baseline;
+  overflow: auto;
+}
+
+.hospe-citaimg {
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+/* PANTALLAS TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hospeini-txt {
+    width: 85%;
+  }
+  .hospe-citatxt {
+    width: 85%;
+  }
+}
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .hospeTitulo h1 {
+    width: 95%;
+    max-width: 100%;
+    margin: 6px;
+  }
+  .hospe-ini {
+    width: 95%;
+    padding: 2px;
+    margin: 6px;
+  }
+  .hospeini-txt {
+    width: 97%;
+    margin: 1px;
+  }
+  .hospeini-img img {
+    width: 98%;
+    height: auto;
+    max-width: 100%;
+    margin: 1px;
+  }
+  .hospe-que {
+    width: 95%;
+  }
+  .hospe-quetxt {
+    width: 87%;
+    margin: 7px 2px;
+    padding: 2px;
+  }
+  .hospe-queimg {
+    width: 88%;
+    height: auto;
+    margin: 2px;
+  }
+  .hospe-cita {
+    width: 95%;
+    height: auto;
+    margin: 20px 5px;
+    padding: 2px;
+  }
+  .hospe-citatxt {
+    width: 89%;
+    margin: 2px;
+  }
+  .hospe-citaimg {
+    margin: 2px;
+  }
+}
+/*---------------------------
+** PROPIEDADES PAGINA PELQUERIA / SPA 
+---------------------------*/
+/*--------** Seccion: Introducción del servicio + imagen-------------*/
+.spa-ini {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+  overflow: auto;
+}
+
+.spa-txtA {
+  width: 50%;
+  padding: 5px;
+  margin: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: baseline;
+  overflow: auto;
+}
+
+.spa-imgA {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+/*--------** Seccion: Lista de los servicios que incluimos-------------*/
+.pelu-list {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.spa-listB {
+  width: 50%;
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: baseline;
+  overflow: auto;
+}
+
+.spa-listB li {
+  background-color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 3px 30px;
+  margin: 15px 100px;
+}
+
+.spa-imgB {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+/*--------** Seccion: Recordatorio final de que se debe reservar una cita-------------*/
+.pelu-cita {
+  width: 70%;
+  height: auto;
+  padding: 3px;
+  margin: 6% 15%;
+}
+
+.pelu-cita p {
+  font-size: 24px;
+}
+
+/*--------** Seccion: Galeria de imagenes-------------*/
+#carouselExample {
+  width: 60%;
+  height: auto;
+  max-width: 100%;
+  margin: 1% 20%;
+}
+
+/* PANTALLAS TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .spa-txtA {
+    width: 60%;
+  }
+  .pelu-list {
+    padding: 2px;
+  }
+  .spa-listB {
+    width: 70%;
+    padding: 5px;
+    margin: 2px;
+  }
+  .spa-imgB {
+    margin: 1%;
+  }
+}
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .spa-ini {
+    display: flex;
+    flex-direction: column;
+  }
+  .spa-txtA {
+    width: 97%;
+    padding: 2px;
+    margin: 3px;
+  }
+  .pelu-list {
+    width: 99%;
+    margin: 2px 1px;
+    padding: 2px;
+  }
+  .spa-listB {
+    width: 75%;
+    margin: 3px 1px;
+    padding: 2px 6%;
+  }
+  .spa-listB li {
+    background-color: white;
+    font-size: 15px;
+    padding: 3px;
+    margin: 15px;
+  }
+  .spa-imgB {
+    margin: 1px;
+    width: 77%;
+  }
+  .pelu-cita {
+    width: 93%;
+    height: auto;
+    padding: 3px;
+    margin: 3% 4%;
+  }
+  #carouselExample {
+    width: 96%;
+    height: auto;
+    max-width: 100%;
+    margin: 3% 2%;
+  }
+}
+/*---------------------------
+** PROPIEDADES PAGINA CONTACTO
+---------------------------*/
+/*--------** Seccion: Todas las formas de contacto + imagen -------------*/
+.contaOpciones {
+  margin: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contac-info {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: auto;
+}
+
+/*--------** Seccion: Formulario de contacto -------------*/
+.formu-con {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: auto;
+}
+.formu-con ul div label {
+  font-size: 21px;
+  display: block;
+  float: center;
+}
+.formu-con ul div input {
+  background-color: whitesmoke;
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.formu-con ul div textarea {
+  background-color: whitesmoke;
+  width: 99%;
+  height: 150px;
+  margin: 7px 0px 20px 0px;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: blak;
+}
+
+.listaFormulario {
+  background-color: white;
+}
+
+/*--------** Seccion: Google Maps con ubicacion-------------*/
+.mapa {
+  width: 97%;
+  max-width: 100%;
+  margin: 1% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: baseline;
+  overflow: auto;
+}
+.mapa iframe {
+  margin: 2%;
+}
+
+/* PANTALLAS TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contac-opciones {
+    width: 60%;
+  }
+  .mapa {
+    margin: 2% 4%;
+  }
+}
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .contac-info {
+    padding: auto;
+    width: 98%;
+  }
+  .contaOpciones p {
+    font-size: 10px;
+    margin: 1px;
+  }
+  .cont-img img {
+    padding: 20px;
+  }
+  form {
+    width: 99%;
+    height: auto;
+    padding: 2px;
+    margin: 2px;
+  }
+  .formu-con ul div input {
+    width: 98%;
+    max-width: 100%;
+  }
+  .formu-con ul div textarea {
+    width: 98%;
+    max-width: 100%;
+  }
+  .listaFormulario {
+    width: 98%;
+    height: auto;
+    max-width: 100%;
+  }
+  .mapa {
+    width: 98%;
+    height: auto;
+    margin: 1%;
+  }
+  .mapa h2 {
+    width: 97%;
+    max-width: 100%;
+    margin: 2%;
+  }
+  .mapa iframe {
+    width: 97%;
+    height: auto;
+    padding: auto;
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

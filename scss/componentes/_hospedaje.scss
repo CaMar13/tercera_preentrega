@@ -1,0 +1,146 @@
+/*---------------------------
+** PROPIEDADES PAGINA HOSPEDAJE
+---------------------------*/
+
+				/*--------** Seccion: Introducción al servicio de hospedaje -------------*/
+.hospe-ini {
+    @include medida-seccion;
+    @include flex(center, center);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    overflow: auto;
+}
+
+.hospeini-txt {
+    width: 50%;
+    margin: 07px 05px;
+    padding: 02px;
+    @include flex(center, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: baseline;
+    overflow: auto;
+}
+
+				/*--------** Seccion: Aclaracion de los que se debe traer -------------*/
+.hospe-que {
+    @include medida-seccion;
+    @include flex(center, center);
+    flex-wrap: wrap;
+    align-content: center;
+    overflow: auto;
+}
+
+.hospe-quetxt {
+    width: 50%;
+    @include box-estilo (05px, 02px);
+    @include flex(center, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: baseline;
+    overflow: auto;
+}
+
+.hospe-queimg {
+    margin: 10px;
+    @include flex(center, none);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+				/*--------** Seccion: Como reservar una cita y proceso de ingreso -------------*/
+.hospe-cita {
+    @include medida-seccion;
+    @include flex(center, center);
+    flex-wrap: wrap;
+    align-content: center;
+    overflow: auto;
+}
+
+.hospe-citatxt {
+    width: 50%;
+    @include box-estilo (05px, 10px);
+    @include flex(center, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: baseline;
+    overflow: auto;
+}
+
+.hospe-citaimg {
+    margin: 03px;
+    @include flex(center, flex-start);
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+
+
+/* PANTALLAS TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .hospeini-txt {
+        width: 85%;
+    }
+
+    .hospe-citatxt {
+        width: 85%;
+    }
+}
+
+
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .hospeTitulo h1 {
+        width: 95%;
+        max-width: 100%;
+        margin: 06px;
+    }
+    
+    .hospe-ini {
+        width: 95%;
+        @include box-estilo (02px, 06px);
+    }
+
+    .hospeini-txt {
+        width: 97%;
+        margin: 01px;
+    }
+
+    .hospeini-img img {
+        @include box-tamano (98%, auto);
+        max-width: 100%;
+        margin: 01px;
+    }
+    
+    .hospe-que {
+        width: 95%;
+    }
+    
+    .hospe-quetxt {
+        width: 87%;
+        margin: 07px 02px;
+        padding: 02px;
+    }
+    
+    .hospe-queimg {
+        @include box-tamano (88%, auto);
+        margin: 02px;
+    }
+
+    .hospe-cita {
+        @include box-tamano (95%, auto);
+        margin: 20px 05px;
+        padding: 02px;
+    }
+    
+    .hospe-citatxt {
+        width: 89%;
+        margin: 02px;
+    }
+    
+    .hospe-citaimg {
+        margin: 02px;
+    }
+}

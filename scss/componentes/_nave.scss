@@ -1,0 +1,159 @@
+/*---------------------------
+** PROPIEDADES DE LA BARRA DE NAVEGACION
+---------------------------*/
+nav {
+    @include box-tamano (100%, 140px);
+    @include flex(center, center);
+    ul {
+        list-style: none;
+        overflow: hidden;
+        background: $color-principal;
+        border-radius: 50px;
+        padding: 02px;
+        box-shadow: 0 25px 20px -20px $color-cinco;
+        li {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            transition: color 0.5s;
+            a {
+                color: $color-cinco;
+                font-family: $fuente-familia-parrafo;
+                font-size: 27px;
+                font-weight: 600;
+                display: block;
+                text-decoration: none;
+                &::after{
+                    content: "";
+                    background: $color-tres;
+                    @include box-tamano (100%, 100%);
+                    border-radius: 30px;
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                    opacity: 0;
+                    transition: top 0.5s, opacity 0.5s;
+                    }
+                    &:hover {
+                    color: $color-principal;
+                    &:hover::after {
+                        top: 50%;
+                        opacity: 1;
+                                    }
+                            }
+            }
+        }
+    }
+    a:hover, a.active {
+        background-color: none;
+        color: $color-seis;
+                        }
+	#check {
+        display: none;
+	}
+	#btn, #cancel {
+        font-size: 40px;
+        float: right;
+        line-height: 40px;
+        margin-right: 03%;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+
+/* PANTALLAS TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    nav ul {
+        padding: 01px;
+        li {
+            padding: 10px 15px;
+            a {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    nav {
+        @include box-tamano (30%, auto);
+        padding: 06px;
+        margin: 05% 01%;
+        ul {
+            @include box-tamano (60%, 260px);
+            overflow: hidden;
+            background: $color-principal;
+            border-radius: 50px;
+            padding: 02px;
+            z-index: 1100;
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .7s;
+            li {
+                display: block;
+                margin: 20px;
+                line-height: 10px;
+                a {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+    label {
+        #btn {
+            display: block;
+        }
+    }
+    #btn {
+        margin-left: -7%;
+        position: static;
+        line-height: 03px;
+        cursor: pointer;
+    }
+    #cancel {
+        margin-left: -7%;
+        position: static;
+        line-height: 03px;
+        cursor: pointer;
+    }
+    a {
+        &:hover {
+            background-color: none;
+            color: $color-seis;
+        }
+    }
+    a.active {
+        background-color: none;
+        color: $color-seis;
+    }
+    #check {
+        &:checked {
+            ~ {
+                ul {
+                    left: 0;
+                }
+                label {
+                    #btn {
+                        display: none;
+                    }
+                    #cancel {
+                        display: block;
+                    }
+                }
+            }
+        }
+        checkbox {
+            display: none;
+        }
+    }
+}
+

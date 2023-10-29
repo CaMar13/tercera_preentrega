@@ -1,0 +1,46 @@
+/*--------** VARIABLES DE COLORES -------------*/
+$color-principal: white;
+$color-dos: #F787D0;
+$color-tres: #83d7d0;
+$color-cuatro: whitesmoke;
+$color-cinco: black;
+$color-seis: rgb(128, 123, 123);
+$background-nada: none;
+
+
+/*--------** VARIABLES DE TIPOGRAFIAS -------------*/
+$fuente-familia-parrafo: 'Rubik', sans-serif;
+$fuente-familia-titulo: 'Mooli', sans-serif;
+$fuente-familia-subtitulo: 'Raleway', sans-serif;
+
+
+
+/*--------** VARIABLE DE ANIMACION DEL LOGO -------------*/
+@-webkit-keyframes tilt-in-top-1 {
+	0% {
+		-webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+		transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+		transform: rotateY(0deg) translateY(0) skewY(0deg);
+		opacity: 1;
+	}
+}
+@keyframes tilt-in-top-1 {
+	0% {
+		-webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+		transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+		transform: rotateY(0deg) translateY(0) skewY(0deg);
+		opacity: 1;
+	}
+}
+
+
+
+

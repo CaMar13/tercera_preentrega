@@ -1,0 +1,21 @@
+@mixin flex ($justify, $aling) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $aling;
+}
+
+@mixin box-tamano ($wid, $heig) {
+    width: $wid;
+    height: $heig;
+}
+
+@mixin box-estilo ($padd, $marg) {
+    padding: $padd;
+    margin: $marg;
+}
+
+@mixin medida-seccion {
+    width: 97%;
+    max-width: 100%;
+    margin: 01% 02%;
+}

@@ -1,0 +1,150 @@
+/*---------------------------
+** PROPIEDADES PAGINA CONTACTO
+---------------------------*/
+
+				/*--------** Seccion: Todas las formas de contacto + imagen -------------*/
+.contaOpciones {
+    margin: 05px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contac-info {
+    @include medida-seccion;
+    padding: 01px;
+    @include flex(center, center);
+    flex-wrap: wrap;
+    align-content: center;
+    overflow: auto;
+}
+
+
+				/*--------** Seccion: Formulario de contacto -------------*/
+.formu-con {
+    @include medida-seccion;
+	padding: 02px;
+    @include flex(center, center);
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	overflow: auto;
+	ul {
+		div {
+			label {
+                font-size: map-get($fuente, large);
+                display: block;
+				float: center;
+			}
+			input {
+				background-color: $color-cuatro;
+                @include box-tamano (400px, 40px);
+				border-radius: 5px;
+				border-style: solid;
+				border-width: 1px;
+				border-color: $color-cinco;
+				margin-top: 10px;
+				padding-left: 10px;
+				margin-bottom: 20px;
+			}
+			textarea {
+				background-color: $color-cuatro;
+                @include box-tamano (99%, 150px);
+				margin: 07px 0px 20px 0px;
+				padding: 15px 10px;
+				border-radius: 5px;
+				border-style: solid;
+				border-width: 1px;
+				border-color: blak;
+			}
+		}
+	}
+}
+
+.listaFormulario {
+	background-color: $color-principal;
+}
+
+
+				/*--------** Seccion: Google Maps con ubicacion-------------*/
+.mapa {
+    @include medida-seccion;
+    @include flex(center, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: baseline;
+    overflow: auto;
+    iframe {
+        margin: 02%;
+    }
+}
+
+
+
+/* PANTALLAS TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .contac-opciones {
+        width: 60%;
+    }
+
+    .mapa {
+        margin: 02% 04%;
+    }
+}
+
+
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .contac-info {
+        padding: auto;
+        width: 98%;
+    }
+
+    .contaOpciones p {
+        font-size: map-get($fuente, small);
+        margin: 01px;
+    }
+
+    .cont-img img {
+        padding: 20px;
+    }
+
+    form {
+        @include box-tamano (99%, auto);
+        @include box-estilo (02px, 02px);
+    }
+    .formu-con {
+        ul {
+            div {
+                input {
+                    width: 98%;
+                    max-width: 100%;
+                }
+                textarea {
+                    width: 98%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .listaFormulario {
+        @include box-tamano (98%, auto);
+        max-width: 100%;
+    }
+
+    .mapa {
+        @include box-tamano (98%, auto);
+        margin: 01%;
+        h2 {
+            width: 97%;
+            max-width: 100%;
+            margin: 2%;
+        }
+        iframe {
+            @include box-tamano (97%, auto);
+            padding: auto;
+            max-width: 100%;
+        }
+    }
+}

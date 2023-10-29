@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"  content="Perro, Mascota, Peluqueria, Guarderia, Hospedaje, canino">
+    <meta name="description" content="En GUREUM ofrecemos servicios de guardería, residencia y spa para perros donde le daremos el mismo amor que tu.">
+    <title>GUREUM Peluqueria canina</title>
+    <link rel="shortcut icon" href="../img/gure-favi.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+    <!--BOOSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <!--ESTILOS-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!--Esto es un encabezado-->
+    <header>
+        <!--LOGO GUREUM-->
+        <div class="logo">
+            <a href="../index.html"><img src="../img/GureumLogo.webp" id="logi" alt="Dibujo perro blanco y ondulado con moño violeta en la cabeza" width="100%" height="597"></a>
+        </div> 
+        
+        <!--Menu de navegacion-->
+        <nav class="menu">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <ion-icon name="menu" id="btn"></ion-icon>
+                <ion-icon name="close" id="cancel"></ion-icon>
+            </label>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./guarderia.html">Guarderia</a></li>
+                <li><a href="./hospedaje.html">Hospedaje</a></li>
+                <li><a class="active" href="./peluqueria.html">Peluqueria</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Contenido principal-->
+    <main>
+        <!--Introducción del servicio + imagen-->    
+        <section class="spaInicio">
+                <h1>GUREUM Peluqueria/Spa canino</h1>
+                <div class="spa-ini">
+
+                    <div class="spa-txtA">
+                        <p> Muchas veces el proceso del baño puede ser lento y estresante tanto para ti como para tu mascota. 
+                        En <b>GUREUM</b> ofrecemos eliminar la ansiedad de bañar a tu perro en casa, gracias a nuestras 
+                        instalaciones especialmente diseñadas y a nuestro equipo que crea un entorno relajante 
+                        y amigable para él.</p>
+                        <p>En nuestro servicio de peluquería usamos champús hipoalergénicos, acondicionadores y 
+                        productos seleccionados para ser seguros y suaves con la piel y el pelo del perro. 
+                        Nuestro staff está altamente capacitado en el manejo de perros de todos los tamaños y razas.</p>
+                    </div>
+
+                    <div class="spa-imgA">
+                        <div>
+                            <img src="/img/spa-01.webp" class="img-general" alt="Perro marron y blanco dentro de una bañera" width="207" height="167">
+                        </div>
+                        <div>
+                            <img src="/img/spa-02.webp" class="img-general" alt="Corte de uña a perro negro y pequeño" width="207" height="147">
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!--Lista de los servicios que incluimos-->
+        <section class="pelu-list">
+                <div class="spa-listB">
+                    <h2>¿ Que incluye nuestro servicio de spa/peluquería canina ?</h2>
+                    <ul>
+                        <li>Baños</li>
+                        <li>Cepillados</li>
+                        <li>Limpieza de oídos</li>
+                        <li>Cepillado de dientes</li>
+                        <li>Corte de uñas</li>
+                        <li>Peluquería canina</li>
+                    </ul>
+                </div>
+
+                <div class="spa-imgB">
+                    <div>
+                        <img src="/img/spa-03.webp" class="img-general" alt="Perro pequeño envuelto en toalla celeste despues de tomar un baño" width="207" height="147">
+                    </div>
+                    <div>
+                        <img src="/img/spa-04.webp" class="img-general" alt="Peluquero peinado a perro blanco y pequeño" width="207" height="147">
+                    </div>
+                </div>
+        </section>
+
+        <!--Recordatorio final de que se debe reservar una cita-->
+        <div class="pelu-cita">
+            <p>Recuerde que usted puede comunicarse con nosotros por cualquiera de nuestros canales de contacto para reservar una cita, los esperamos.</p>
+        </div>
+
+        <!--Bloque de imagenes-->
+        <div class="spaGaleria">
+            <div class="pelu-gale">
+                <h2>Nuestros hermosos amigos</h2>
+            </div>
+
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/img/cli-01.webp" class="d-block w-100" alt="Perro pequeño con moño amarillo" width="407" height="487">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/cli-02.webp" class="d-block w-100" alt="Perro pequeño mirando de frente y sacando la lengua" width="407" height="497">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/cli-03.webp" class="d-block w-100" alt="Perro mediano blanco y marron con pañuelo rojo y blanco en el cuello">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/spaC.webp" class="d-block w-100" alt="Perro blanco con pelo ondulado y vestido rosa">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/spaA.webp" class="d-block w-100" alt="Perro chico marron y blanco con pañuelo verde en el cuello">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!--Enlaces flotantes externos: Redes sociales-->
+        <aside id="redesSociales">
+            <ul class ="social">
+                <a href="https://www.instagram.com/gureum.pet/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="https://twitter.com/Gureumpet" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            </ul>
+        </aside>
+    </main>
+    
+    <!--Pie de pagina-->
+    <footer>
+        <!--Copyright-->
+        <section class="copy">
+            <p>Copyright © 2023 GUREUM Pet Home. All Rights Reserved.</p>
+        </section>
+    </footer>
+        
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

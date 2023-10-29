@@ -1,0 +1,153 @@
+/*---------------------------
+** PROPIEDADES PAGINA PELQUERIA / SPA 
+---------------------------*/
+
+				/*--------** Seccion: Introducción del servicio + imagen-------------*/
+.spa-ini {
+    @include medida-seccion;
+    @include flex(center, center);
+    flex-direction: row;
+    align-content: center;
+    overflow: auto;
+}
+
+.spa-txtA {
+    width: 50%;
+    @include box-estilo (05px, 17px);
+    @include flex(center, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: baseline;
+    overflow: auto;
+}
+
+.spa-imgA {
+    @include flex(center, flex-start);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+				/*--------** Seccion: Lista de los servicios que incluimos-------------*/
+.pelu-list {
+    @include medida-seccion;
+    padding: 02px;
+    @include flex(center, center);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.spa-listB {
+    width: 50%;
+    @include box-estilo (05px, 02px);
+    @include flex(center, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: baseline;
+    overflow: auto;
+}
+
+.spa-listB li {
+    background-color: $color-principal;
+    font-family: $fuente-familia-parrafo;
+    font-size: map-get($fuente, normal);
+    font-weight: 400;
+    padding: 03px 30px;
+    margin: 15px 100px;
+}
+
+.spa-imgB {
+    @include flex(center, flex-start);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+				/*--------** Seccion: Recordatorio final de que se debe reservar una cita-------------*/
+.pelu-cita {
+    @include box-tamano (70%, auto);
+    padding: 03px;
+    margin: 06% 15%;
+}
+
+.pelu-cita p {
+    font-size: map-get($fuente, largeb);
+}
+
+				/*--------** Seccion: Galeria de imagenes-------------*/
+#carouselExample {
+    @include box-tamano (60%, auto);
+    max-width: 100%;
+    margin: 01% 20%;
+}
+
+
+
+
+/* PANTALLAS TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .spa-txtA {
+        width: 60%;
+    }
+
+    .pelu-list {
+        padding: 02px;
+    }
+    
+    .spa-listB {
+        width: 70%;
+        @include box-estilo (05px, 02px);
+    }
+
+    .spa-imgB {
+        margin: 01%;
+    }
+}
+
+/* PANTALLA CELULAR */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .spa-ini {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .spa-txtA {
+        width: 97%;
+        @include box-estilo (02px, 03px);
+    }
+    
+    .pelu-list {
+        width: 99%;
+        margin: 02px 01px;
+        padding: 02px;
+    }
+
+    .spa-listB {
+        width: 75%;
+        margin: 03px 01px;
+        padding: 02px 06%;
+        li {
+            background-color: $color-principal;
+            font-size: map-get($fuente, smallb);
+            @include box-estilo (03px, 15px);
+        }
+    }
+
+    .spa-imgB {
+        margin: 01px;
+        width: 77%;
+    }
+
+    .pelu-cita {
+        @include box-tamano (93%, auto);
+        padding: 03px;
+        margin: 03% 04%;
+    }
+
+    #carouselExample {
+        @include box-tamano (96%, auto);
+        max-width: 100%;
+        margin: 03% 02%;
+    }
+}
